@@ -1,0 +1,32 @@
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+    gap: 10px;
+    background-color: rgb(70, 70, 70);
+}
+
+div {
+    display: flex;
+    gap: 10px;
+}
+
+h1 {
+    font-size: 50px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: #949292;
+}
+
+input {
+    padding: 10px;
+    background-color: rgb(175, 175, 175);
+    border-radius: 10px;
+    transition: all .3s;
+}
+
+input:hover {
+    background-color: rgb(136, 136, 136);
+}
