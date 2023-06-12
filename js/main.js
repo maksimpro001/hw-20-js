@@ -1,14 +1,19 @@
-let h1 = document.querySelector("h1")
-let plus = document.querySelector(".plus")
+// find element in DOM tree
+
 let minus = document.querySelector(".minus")
+let plus = document.querySelector(".plus")
 let reset = document.querySelector(".reset")
-let on10 = document.querySelector(".on-10")
-let on50 = document.querySelector(".on-50")
-let on100 = document.querySelector(".on-100")
+let on_10 = document.querySelector(".on-10")
+let on_50 = document.querySelector(".on-50")
+let on_100 = document.querySelector(".on-100")
+let h1 = document.querySelector("h1")
 
-let count = Number(localStorage.getItem("count"));
+// create variable and logistics for variable
 
+let count = localStorage.getItem("count")
 count == null ? count = 0 : count
+
+// create function update
 
 const update = () => {
     localStorage.setItem("count", count)
@@ -18,13 +23,15 @@ const update = () => {
 
 update()
 
-plus.addEventListener("click", e => {
-    count++
-    update()
-})
+// add event for element
 
 minus.addEventListener("click", e => {
     count--
+    update()
+})
+
+plus.addEventListener("click", e => {
+    count++
     update()
 })
 
@@ -33,17 +40,17 @@ reset.addEventListener("click", e => {
     update()
 })
 
-on10.addEventListener("click", e => {
+on_10.addEventListener("click", e => {
     count += 10
     update()
 })
 
-on50.addEventListener("click", e => {
+on_50.addEventListener("click", e => {
     count += 50
     update()
 })
 
-on100.addEventListener("click", e => {
+on_100.addEventListener("click", e => {
     count += 100
     update()
 })
